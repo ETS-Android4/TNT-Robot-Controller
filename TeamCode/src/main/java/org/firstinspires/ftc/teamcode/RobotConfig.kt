@@ -16,8 +16,8 @@ class RobotConfig(aHardwareMap: HardwareMap?) {
 
     var CA: DcMotor
     var DS: DistanceSensor
-    var I1: CRServo
-    var EL: CRServo
+    var I1: DcMotor
+    var LIFT: DcMotor
 
 
 
@@ -47,13 +47,13 @@ class RobotConfig(aHardwareMap: HardwareMap?) {
          * br=br=3
          */
 
-        I1 = hardwareMap!!.get(CRServo::class.java, "I1")
-        EL = hardwareMap!!.get(CRServo::class.java, "EL")
+        I1 = hardwareMap!!.get(DcMotor::class.java, "I1")
+        LIFT = hardwareMap!!.get(DcMotor::class.java, "LIFT")
         CA = hardwareMap!!.get(DcMotor::class.java, "CA")
 
         // you can use this as a regular DistanceSensor.
         DS = hardwareMap!!.get(DistanceSensor::class.java, "DS")
-        FL = hardwareMap!!.get(DcMotor::class.java, "FR")
+        FL = hardwareMap!!.get(DcMotor::class.java, "FL")
         BL = hardwareMap!!.get(DcMotor::class.java, "BL")
         FR = hardwareMap!!.get(DcMotor::class.java, "FR")
         BR = hardwareMap!!.get(DcMotor::class.java, "BR")
